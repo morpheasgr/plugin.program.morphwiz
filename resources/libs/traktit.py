@@ -29,7 +29,7 @@ from resources.libs.common.config import CONFIG
 from resources.libs.common import logging
 from resources.libs.common import tools
 
-ORDER = ['exodusredux', 'fen', 'gaia', 'numbers', 'openmeta', 'premiumizer',
+ORDER = ['exodusredux', 'fen', 'filmnet', 'gaia', 'numbers', 'openmeta', 'premiumizer',
          'realizer', 'scrubs', 'seren', 'shadow', 'thecrew', 'trakt', 'venom']
 
 TRAKTID = {
@@ -93,6 +93,18 @@ TRAKTID = {
         'default'  : 'trakt.user',
         'data'     : ['trakt.user', 'trakt.refresh', 'trakt.token'],
         'activate' : 'RunPlugin(plugin://plugin.video.exodusredux/?action=authTrakt)'},
+    'filmnet': {
+        'name'     : 'Filmnet',
+        'plugin'   : 'plugin.video.filmnet',
+        'saved'    : 'filmnet',
+        'path'     : os.path.join(CONFIG.ADDONS, 'plugin.video.filmnet'),
+        'icon'     : os.path.join(CONFIG.ADDONS, 'plugin.video.filmnet', 'icon.jpg'),
+        'fanart'   : os.path.join(CONFIG.ADDONS, 'plugin.video.filmnet', 'fanart.jpg'),
+        'file'     : os.path.join(CONFIG.TRAKTFOLD, 'filmnet_trakt'),
+        'settings' : os.path.join(CONFIG.ADDON_DATA, 'plugin.video.filmnet', 'settings.xml'),
+        'default'  : 'trakt.user',
+        'data'     : ['trakt.token', 'trakt.refresh', 'trakt.user'],
+        'activate' : 'RunPlugin(plugin://plugin.video.filmnet/?action=authTrakt)'},
     'openmeta': {
         'name'     : 'OpenMeta',
         'plugin'   : 'plugin.video.openmeta',

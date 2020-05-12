@@ -105,6 +105,7 @@ class MaintenanceMenu:
         if includeall == 'true':
             includegaia = 'true'
             includeexodusredux = 'true'
+            includefilmnet = 'true'
             includethecrew = 'true'
             includeyoda = 'true'
             includevenom = 'true'
@@ -113,6 +114,7 @@ class MaintenanceMenu:
             includeseren = 'true'
         else:
             includeexodusredux = 'true' if CONFIG.INCLUDEEXODUSREDUX == 'true' else 'false'
+            includefilmnet = 'true' if CONFIG.INCLUDEFILMNET == 'true' else 'false'
             includegaia = 'true' if CONFIG.INCLUDEGAIA == 'true' else 'false'
             includethecrew = 'true' if CONFIG.INCLUDETHECREW == 'true' else 'false'
             includeyoda = 'true' if CONFIG.INCLUDEYODA == 'true' else 'false'
@@ -130,6 +132,11 @@ class MaintenanceMenu:
                     '--- Include Exodus Redux: {0}'.format(
                         includeexodusredux.replace('true', on).replace('false', off)),
                     {'mode': 'togglecache', 'name': 'includeexodusredux'}, icon=CONFIG.ICONMAINT, themeit=CONFIG.THEME3)
+            if xbmc.getCondVisibility('System.HasAddon(plugin.video.filmnet)'):
+                directory.add_file(
+                    '--- Include Filmnet: {0}'.format(
+                        includefilmnet.replace('true', on).replace('false', off)),
+                    {'mode': 'togglecache', 'name': 'includefilmnet'}, icon=CONFIG.ICONMAINT, themeit=CONFIG.THEME3)
             if xbmc.getCondVisibility('System.HasAddon(plugin.video.gaia)'):
                 directory.add_file(
                     '--- Include Gaia: {0}'.format(includegaia.replace('true', on).replace('false', off)),

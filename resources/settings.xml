@@ -53,6 +53,7 @@
         <setting id="includevideo" type="bool" label="Include Video Addons in Clear Cache: " default="true"/>
         <setting id="includeall" type="bool" label="Include All Addons: " default="true" enable="!eq(-1,false)"/>
         <setting id="includeexodusredux" type="bool" label="Include Exodus Redux DB: " default="true" enable="eq(-1,false)" visible="System.HasAddon(plugin.video.exodusredux)"/>
+		<setting id="includefilmnet" type="bool" label="Include Filmnet Cache DB: " default="true" enable="eq(-1,false)" visible="System.HasAddon(plugin.video.filmnet)"/>
         <setting id="includegaia" type="bool" label="Include Gaia Cache DB: " default="true" enable="eq(-2,false)" visible="System.HasAddon(plugin.video.gaia)"/>
         <setting id="includenumbers" type="bool" label="Include NuMb3r5 Cache DB: " default="true" enable="eq(-3,false)" visible="System.HasAddon(plugin.video.numbersbynumbers)"/>
         <setting id="includescrubs" type="bool" label="Include Scrubs v2 Cache DB: " default="true" enable="eq(-4,false)" visible="System.HasAddon(plugin.video.scrubsv2)"/>
@@ -62,6 +63,7 @@
 
         <!-- Default settings for Save Data entries -->
         <setting id="exodusredux" type="text" default="" visible="false"/>
+        <setting id="filmnet" type="text" default="" visible="false"/>
         <setting id="fen" type="text" default="" visible="false"/>
         <setting id="gaia" type="text" default="" visible="false"/>
         <setting id="numbers" type="text" default="" visible="false"/>
@@ -100,6 +102,7 @@
         <setting id="easynews-fen" type="text" default="" visible="false"/>
         <setting id="furk-fen" type="text" default="" visible="false"/>
         <setting id="fanart-exodusredux" type="text" default="" visible="false"/>
+        <setting id="fanart-filmnet" type="text" default="" visible="false"/>
         <setting id="fanart-gaia" type="text" default="" visible="false"/>
         <setting id="fanart-numbers" type="text" default="" visible="false"/>
         <setting id="fanart-thecrew" type="text" default="" visible="false"/>
@@ -111,6 +114,7 @@
         <setting id="fanart-seren" type="text" default="" visible="false"/>
         <setting id="fanart-tmdbhelper" type="text" default="" visible="false"/>
         <setting id="imdb-exodusredux" type="text" default="" visible="false"/>
+        <setting id="imdb-filmnet" type="text" default="" visible="false"/>
         <setting id="imdb-gaia" type="text" default="" visible="false"/>
         <setting id="imdb-numbers" type="text" default="" visible="false"/>
         <setting id="imdb-thecrew" type="text" default="" visible="false"/>
@@ -135,6 +139,7 @@
         <setting id="tmdb-numbers" type="text" default="" visible="false"/>
         <setting id="tmdb-metadatautils" type="text" default="" visible="false"/>
         <setting id="tmdb-eis" type="text" default="" visible="false"/>
+        <setting id="tmdb-filmnet" type="text" default="" visible="false"/>
         <setting id="tmdb-openmeta" type="text" default="" visible="false"/>
         <setting id="tmdb-thecrew" type="text" default="" visible="false"/>
         <setting id="tmdb-premiumizer" type="text" default="" visible="false"/>

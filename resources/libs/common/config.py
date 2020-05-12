@@ -220,6 +220,7 @@ class Config:
         self.INCLUDEVIDEO = self.get_setting('includevideo')
         self.INCLUDEALL = self.get_setting('includeall')
         self.INCLUDEEXODUSREDUX = self.get_setting('includeexodusredux')
+        self.INCLUDEFILMNET = self.get_setting('includefilmnet')
         self.INCLUDEGAIA = self.get_setting('includegaia')
         self.INCLUDESEREN = self.get_setting('includeseren')
         self.INCLUDETHECREW = self.get_setting('includethecrew')
