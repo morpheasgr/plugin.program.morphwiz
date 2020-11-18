@@ -292,6 +292,7 @@ class Config:
         try:
             xbmcaddon.Addon(id).openSettings()
         except:
+            import logging
             logging.log('Cannot open settings for {}'.format(id), level=xbmc.LOGERROR)
         
         if int(self.KODIV) < 18:
